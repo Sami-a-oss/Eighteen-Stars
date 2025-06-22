@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="drag-container">
+  <div id="spin-container">
+    <img src="Weixin Image_20250622165041.jpg" alt="Image 1" style="background-size: cover; object-fit: cover; object-position: center;">
+    <img src="six.jpg" alt="Image 2" style="background-size: cover; object-fit: cover; object-position: center;">
+    <img src="five.jpg" alt="Image 3" style="background-size: cover; object-fit: cover; object-position: center;">
+    <img src="four.jpg" alt="Image 4" style="background-size: cover; object-fit: cover; object-position: center;">
+    <img src="two.jpg" alt="Image 5" style="background-size: cover; object-fit: cover; object-position: center;">
+    <img src="three.jpeg" alt="Image 6" style="background-size: cover; object-fit: cover; object-position: center;">
+    <video autoplay loop muted playsinline>
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    <video autoplay loop muted playsinline>
+      <source src="video1.mp4" type="video/mp4">
+    </video>
+    <p><span style="font-size: 1.5rem; font-style: italic;">何湘</span> <mark style="font-size: 1.5rem;">Happy Birthday愿你十八岁如星闪耀,梦想都成真</mark></p>
+  </div>
+  <div id="ground"></div>
+</div>
+<div id="music-container">
+
+</div>
+
+
+<style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+<script  src="./script.js"></script>
+
+<script>
+  let musicStarted = false;
+  function startMusic() {
+    if (!musicStarted) {
+      const music = document.getElementById("bgMusic");
+      music.muted = false;
+      music.play().catch(() => { });
+      musicStarted = true;
+    }
+  }
+  document.body.addEventListener("click", startMusic);
+  document.body.addEventListener("pointerdown", startMusic);
+</script>
+
+</body>
+
